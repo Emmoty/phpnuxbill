@@ -4,8 +4,7 @@ services:
     pull_policy: always
     build: ./
     restart: unless-stopped
-    ports:
-      - "80:80"
+  
     environment:
       TZ: Africa/Nairobi
     depends_on:
@@ -19,8 +18,7 @@ services:
       MYSQL_DATABASE: "nuxbill"
       MYSQL_USER: "nuxbill"
       MYSQL_PASSWORD: "12345678"
-    ports:
-      - "3306:3306"
+   
 
 # skip data persistance (if dev testing)
 #     volumes:
